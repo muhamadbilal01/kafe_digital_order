@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Digital - Pesan Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <i class="fas fa-mug-hot"></i>
+            <h1>Café Digital</h1>
+        </div>
+        <div class="header-right">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jakarta, Indonesia</span>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <button class="category-btn active" data-category="Semua">Semua</button>
+        <button class="category-btn" data-category="Kopi">Kopi</button>
+        <button class="category-btn" data-category="Makanan">Makanan</button>
+        <button class="category-btn" data-category="Minuman">Minuman</button>
+    </nav>
+
+    <main class="menu-container">
+        </main>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p id="empty-cart-message">Keranjang Anda kosong.</p>
+        </div>
+        <div class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn" onclick="sendOrderViaWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
